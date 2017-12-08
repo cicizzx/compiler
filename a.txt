@@ -1,0 +1,10 @@
+void main()
+{
+	if()	;
+	do
+		;
+	while();
+	a=b;
+
+	printf(1);
+}
