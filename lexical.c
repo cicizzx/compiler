@@ -2,8 +2,9 @@
 #include"error.h"
 #include<stdio.h>
 extern FILE *fp;
+#define STRINGLENGTH 128
 int line=0,tokennum=0,tmp=0;
-char token[1024]={0},ch=0;
+char token[STRINGLENGTH]={0},ch=0;
 int getword()
 {
 	//字符串单独拎出来处理 
@@ -17,7 +18,7 @@ int getword()
 				id=1;
 			token[tokennum++]=getsym();
 			flag=1;
-			if(tokennum==1024){
+			if(tokennum==STRINGLENGTH){
 				error(STRING_TOO_LONG);
 				break;
 			}
@@ -40,7 +41,7 @@ int getword()
 			while(token[tokennum-1]!='\"'&&token[tokennum-1]!='\n'&&token[tokennum-1]!=EOF) {
 				flag=1;
 				token[tokennum++]=getsym();
-				if(tokennum==1024){
+				if(tokennum==STRINGLENGTH){
 				error(STRING_TOO_LONG);
 				break;
 			}
@@ -66,7 +67,7 @@ int getword()
 			while(token[tokennum-1]!='\''&&token[tokennum-1]!='\n'&&token[tokennum-1]!=EOF) {
 				flag=1;
 				token[tokennum++]=getsym();
-				if(tokennum==1024){
+				if(tokennum==STRINGLENGTH){
 				error(STRING_TOO_LONG);
 				break;
 			}
@@ -124,7 +125,7 @@ int getword()
 	
 	while(token[tokennum-1]==' '||token[tokennum-1]=='\t'){
 		token[tokennum-1]=getsym();
-		if(tokennum==1024){
+		if(tokennum==STRINGLENGTH){
 				error(STRING_TOO_LONG);
 				break;
 			}

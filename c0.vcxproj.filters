@@ -24,6 +24,12 @@
     <ClInclude Include="lexical.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="pcode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="table.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lexical.c">
@@ -36,6 +42,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="grammer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p-code.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="table.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

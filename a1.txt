@@ -23,7 +23,7 @@ void foo2()
 		case 0:do{
 			b=+b+'0';
 			printf("%d",b);}
-		while(b<3);
+		while(b<3)
 	}
 	
 	return ;
@@ -86,7 +86,7 @@ void main()
 		
 	do{
 		carray[m]='a'+m;
-	}while(m<26);
+	}while(m<26)
 	
 	m=+(const_1)*8/const_2;		
 	do{
@@ -97,7 +97,7 @@ void main()
 			case 15:arr[m]=foo1(m-4);
 		}		
 		m=m+1;		
-	}while(m<52);
+	}while(m<52)
 	
 	printf("%c",foo3('f',2));
 	printf(+2-30*89);

@@ -45,6 +45,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -64,12 +65,16 @@
     <ClInclude Include="error.h" />
     <ClInclude Include="grammer.h" />
     <ClInclude Include="lexical.h" />
+    <ClInclude Include="pcode.h" />
+    <ClInclude Include="table.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="error.c" />
     <ClCompile Include="grammer.c" />
     <ClCompile Include="lexical.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="p-code.c" />
+    <ClCompile Include="table.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

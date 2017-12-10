@@ -2,21 +2,22 @@
 #define TABLE_H
 #define COMPARAMETERSNUMBER 10
 #define TMAX 128
+#define STRINGLENGTH 128
 enum tablename{
-	NOTFOUND,
+	NOTFOUND=-1,
 	CONSTANT,
 	PARAMETER,
 	SIMPLE_VARIABLE,
 	ARRAY_VARIABLE,
 	FUNCTION
 };
-struct table
+struct tb
 {
 	
 	int type;//FUNCTION,VARIABLE,CONSTANT
 	int kind;//char\int
-	char name[1024];
-	char area[1024];//有效函数区域(VARIABLE,CONSTANT)
+	char name[STRINGLENGTH];
+	char area[STRINGLENGTH];//有效函数区域(VARIABLE,CONSTANT)
 	int value;//常量（char\int）存值，简单变量存函数内地址偏移
 	int length;//数组,函数长度，参数个数
 
@@ -24,10 +25,10 @@ struct table
 struct funtable
 {
 	int type;//char int void
-	char name[1024];
-	//int enterpnum;
+	char name[STRINGLENGTH];
 	int paranum;
 	int para1;
+	
 };
 
 void entertable(int type,char id[],int value,int kind,char func[]);

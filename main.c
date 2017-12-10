@@ -5,17 +5,17 @@
 FILE *fp=NULL;
 int main()
 {
-	char path[1024]={0};
+	char path[128]={0};
 	
-	printf("please input path£º\n");
+	/*printf("please input path£º\n");
 	gets(path);
 	
 	while((fp=fopen(path,"r"))==NULL)
 	{
 		printf("Can not find the file, please re-input£º\n");
 		gets(path);
-	}
-
+	}*/
+	fp=fopen("a.txt","r");
 	program();
 	
 	printf("end!\n");
